@@ -1,4 +1,5 @@
 $black: #232323;
+$shopify: #7ab55c;
 
 
 body { -webkit-touch-callout: none !important; 
@@ -10,7 +11,7 @@ a{
 }
 
 .body-dark{
-  background: $black;
+  background: $shopify;
 }
 
 @mixin transition($transition-property,$transition-time, $transition-ease){
@@ -71,7 +72,7 @@ body{
     line-height: 150px;
   }
   .clock{
-    color:$black;
+    color:$shopify;
     position: absolute;
     top:0;
     left:0;
@@ -93,15 +94,15 @@ body{
   margin-left: 20px;
   position: absolute;
   bottom:20px;
-  background: $black;
+  background: $shopify;
   color:white;
   &.white{
     background: white;
-    color:$black;
+    color:$shopify;
   }
   &.green{
     background: white;
-    color: rgba(71,215,193,1);
+    color: rgba($shopify,1);
   }
 }
 
@@ -138,19 +139,23 @@ h6.header{
   opacity: .2;
   @include transition(opacity,.5s,ease-in-out);
   padding: 10px;
+  border-radius: 2px;
   &.focus{
     opacity: 1;
-    background: #47d7c1;
+    background: $shopify;
+    .am,.pm{
+      color:white;
+    }
     
   }
 .am,.pm{
   display: inline-block;
-  color:$black;
+  color: $black;
   opacity: .4;
   margin: 1%;
   width: 44%;
   text-align: left;
-  @include transition(opacity,.5s,ease-in-out);
+  @include transition(all,.5s,ease-in-out);
 }
 &.setAM{
   .am{
@@ -188,7 +193,7 @@ h6.header{
     &.focus{
       opacity: 1;
     &.holder{
-      background: rgba(71,215,193,1);
+      background: rgba($shopify,1);
     }
     }
     &:after,&:before{
@@ -248,7 +253,7 @@ h6.header{
 }
 .success{
   z-index: 9999;
-  background: rgba(71,215,193,1);
+  background: rgba($shopify,1);
   border-radius: 100%;
   height: 1400px;
   width:1400px;
@@ -299,7 +304,7 @@ h6.header{
   visibility: hidden;
   @include transition(all,.8s,ease-in-out);
   .clock .holder:after, .clock .holder:before{
-    background: rgba(71,215,193,1);
+    background: rgba($shopify,1);
   }
   &.done{
     opacity: 1;
