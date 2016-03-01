@@ -1,4 +1,4 @@
-# Shopify TapTime App 
+# TapTime App 
 
 ![shopify](http://sweetyams.com/portfolio/wp-content/uploads/2016/03/clock1-1.jpg)
 
